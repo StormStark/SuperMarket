@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="@color/onPrimary"
+            android:layout_marginLeft="32dp"
+            android:textSize="32sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:background="@drawable/rounded_corners_top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:paddingBottom="16dp"
+                android:textColor="@color/onBackground"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/onBackgroundLight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_all"
+                    android:backgroundTint="@color/colorBackgroundLight"
+                    android:textColorHint="@color/onBackgroundLight"
+                    android:textColor="@color/onBackgroundLight" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:paddingBottom="16dp"
+                android:textColor="@color/onBackground"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/onBackgroundLight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_all"
+                    android:backgroundTint="@color/colorBackgroundLight"
+                    android:textColorHint="@color/onBackgroundLight"
+                    android:textColor="@color/onBackgroundLight"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"/>
+
+            <Button
+                android:backgroundTint="@color/colorBackgroundLight"
+                android:id="@+id/googleButton"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue using Google"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|bottom">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have account?"
+                android:textColor="@color/onPrimary"/>
+            <TextView
+                android:id="@+id/signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" SignUp"
+                android:textStyle="bold"
+                android:textColor="@color/onPrimary"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

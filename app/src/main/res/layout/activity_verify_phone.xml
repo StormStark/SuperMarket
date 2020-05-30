@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".VerifyPhone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Verify Phone"
+            android:textColor="@color/onPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Verify Phone"
+            android:textColor="@color/onPrimary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:background="@drawable/rounded_corners_top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="Country Code"
+                android:textColor="@color/onBackground"
+                android:textSize="20sp" />
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/cpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:ccp_backgroundColor="@color/colorBackgroundLight"
+                app:ccp_textColor="@color/onBackgroundLight"
+                android:background="@drawable/rounded_corners_all"
+                android:backgroundTint="@color/colorBackgroundLight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="Phone Number"
+                android:textColor="@color/onBackground"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_all"
+                    android:backgroundTint="@color/colorBackgroundLight"
+                    android:inputType="phone"
+                    android:textColor="@color/onBackgroundLight"
+                    android:textColorHint="@color/onBackgroundLight" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/sendCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBackgroundLight"
+                android:padding="16dp"
+                android:text="Send Code" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/rounded_corners_top"
+            android:backgroundTint="@color/colorBackgroundLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32dp"
+            android:paddingTop="16dp"
+            android:paddingRight="32dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/verificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Code"
+                android:textColorHint="@color/onBackgroundLight"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_all"
+                    android:backgroundTint="@color/colorBackground"
+                    android:inputType="number"
+                    android:textColor="@color/onBackgroundLight" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/verifyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/onPrimary"
+                android:padding="16dp"
+                android:text="VERIFY" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/colorBackgroundLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:src="@drawable/meat_icon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="2"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/onBackgroundLight" />
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description of the product"
+                android:textColor="@color/onBackgroundLight" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1Kg | Rs. 180"
+                    android:textColor="@color/onPrimary" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button 1"
+                        style="?attr/materialButtonOutlinedStyle"
+                        />
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button 2"
+                        style="?attr/materialButtonOutlinedStyle"
+                        />
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button 3"
+                        style="?attr/materialButtonOutlinedStyle"
+                        />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
